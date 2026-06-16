@@ -9,13 +9,6 @@ CREATE TABLE IF NOT EXISTS users (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS roles (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
 CREATE TABLE IF NOT EXISTS subjects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
@@ -51,7 +44,5 @@ CREATE TABLE IF NOT EXISTS classes (
     FOREIGN KEY (teacher_id) REFERENCES teachers(id)
 );
 
-
-INSERT INTO roles (name) VALUES ('Admin'), ('Teacher'), ('Student');
 INSERT INTO subjects (name) VALUES ('Mathematics'), ('Mother Tongue Language'), ('Science');
 INSERT INTO levels (name) VALUES ('Primary 1'), ('Primary 2'), ('Primary 3');
