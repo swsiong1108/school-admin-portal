@@ -62,7 +62,7 @@ export default function AddTeacherPage() {
 
   return (
     <Paper elevation={0} sx={{ p: 3, border: '1px solid #e0e0e0' }}>
-      <Typography variant="h5" fontWeight={700} mb={3}>Add Teacher</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 700, mb: 3 }}>Add Teacher</Typography>
 
       <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {error && <Alert severity="error">{error}</Alert>}

@@ -14,7 +14,7 @@ export default function TopNav() {
       <Toolbar sx={{ gap: 1 }}>
         {/* Logo */}
         <SchoolIcon sx={{ mr: 1, color: 'primary.main' }} />
-        <Typography variant="h6" fontWeight={700} sx={{ mr: 4, color: 'primary.main' }}>
+        <Typography variant="h6" sx={{ mr: 4, color: 'primary.main', fontWeight: 700 }}>
         School Portal
         </Typography>
 

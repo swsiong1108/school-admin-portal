@@ -63,10 +63,10 @@ export default function AddClassPage() {
 
   return (
     <Paper elevation={0} sx={{ p: 3, border: '1px solid #e0e0e0' }}>
-      <Typography variant="h5" fontWeight={700} mb={3}>Add Class</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 700, mb: 3 }}>Add Class</Typography>
 
       <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {error && <Typography color="error" fontSize="0.9rem">{error}</Typography>}
+        {error && <Typography sx={{ color: 'error.main', fontSize: '0.9rem' }}>{error}</Typography>}
 
         <TextField label="Class Name" name="name" value={form.name} onChange={handleChange} placeholder="e.g. 1A, 2B" required fullWidth />
 

@@ -35,7 +35,7 @@ jobs:
 
             echo "Rebuilding and restarting containers..."
             docker compose down
-            docker compose up -d --build
+            DOCKER_BUILDKIT=0 docker compose up -d --build
 
             echo "Cleaning up unused images..."
             docker image prune -f

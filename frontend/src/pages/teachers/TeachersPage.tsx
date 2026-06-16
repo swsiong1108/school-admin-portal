@@ -29,7 +29,7 @@ export default function TeachersPage() {
   return (
     <Paper elevation={0} sx={{ p: 3, border: '1px solid #e0e0e0' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h5" fontWeight={700}>Teachers</Typography>
+        <Typography variant="h5" sx={{ fontWeight: 700 }}>Teachers</Typography>
         {teachers.length > 0 && (
           <Button variant="contained" startIcon={<AddIcon />} onClick={() => navigate('/teachers/add')}>
             Add Teacher
